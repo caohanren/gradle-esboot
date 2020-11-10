@@ -1,0 +1,41 @@
+//apply plugin 可以用在 allprojects 和 subprojects 中
+//plugins {},块导入的是Gradle官方插件仓库里的插件。
+//如果使用buildscript {}块指定第三方库作为Gradle插件的话，
+//指定插件就需要使用apply plugin了。
+plugins {
+    id 'org.springframework.boot' version '2.1.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testCompile('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    //compile group: 'org.elasticsearch', name: 'elasticsearch', version: '5.6.8'
+    //compile group: 'org.elasticsearch.client', name: 'transport', version: '5.6.8'
+    //compile group: 'org.elasticsearch.plugin', name: 'transport-netty4-client', version: '5.6.8'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+    //compile group: 'org.springframework.data', name: 'spring-data-elasticsearch', version: '3.0.5.RELEASE'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
