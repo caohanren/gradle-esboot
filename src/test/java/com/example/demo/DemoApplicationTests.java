@@ -1,26 +1,24 @@
-package com.example.demo;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@WebAppConfiguration
-public class DemoApplicationTests {
-
-    @Test
-    public void test() {
-
-        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
-    }
-
-    @Test
-    public void test2() {
-
-        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
-    }
-
-}
+//package com.example.demo;
+//
+//import org.junit.Test;
+//import org.junit.runner.RunWith;
+//import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+//
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringBootTest
+//public class DemoApplicationTests {
+//
+//    @Test
+//    public void test() {
+//
+//        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
+//    }
+//
+//    @Test
+//    public void test2() {
+//
+//        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
+//    }
+//
+//}

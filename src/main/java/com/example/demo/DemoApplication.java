@@ -6,17 +6,19 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class DemoApplication extends SpringBootServletInitializer {
+public class DemoApplication  {
 
-    /**
-     * tomcat打包运行
-     * @param application
-     * @return
-     */
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(DemoApplication.class);
-    }
+    //class DemoApplication extends SpringBootServletInitializer
+
+//    /**
+//     * tomcat打包运行
+//     * @param application
+//     * @return
+//     */
+//    @Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//        return application.sources(DemoApplication.class);
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
