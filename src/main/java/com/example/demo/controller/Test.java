@@ -8,7 +8,7 @@ public class Test {
 
     @RequestMapping("/test1")
     public String test1(){
-        return "hello gradle....";
+        return "恭喜你学会了jenkins集成gradel...";
     }
 
     public static void main(String[] args) {
